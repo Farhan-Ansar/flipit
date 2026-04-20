@@ -1,3 +1,5 @@
+import 'package:flipit/view/screen/chat/chat_screen.dart';
+import 'package:flipit/view/screen/chat/message_screen.dart';
 import 'package:flipit/view/screen/feed/feed_without_ad_screen.dart';
 import 'package:flipit/view/screen/profile/Profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +11,8 @@ import '../../../generated/assets.dart';
 import '../../custom/common_image_view_widget.dart';
 import '../../custom/my_text_widget.dart';
 import '../home/home_screen.dart';
+import '../search/search_card_view_screen.dart';
+import '../search/search_screen.dart';
 
 
 class BottomNavBarScreen extends StatelessWidget {
@@ -47,10 +51,10 @@ class BottomNavBarScreen extends StatelessWidget {
 
   final List<Widget> screens = [
 
-    HomeScreen(),
+    SearchCardViewScreen(),
     FeedWithoutAdScreen(),
-    FeedWithoutAdScreen(),
-    FeedWithoutAdScreen(),
+    SearchScreen(),
+    ChatScreen(),
     ProfileScreen(),
 
   ];

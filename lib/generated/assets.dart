@@ -13,11 +13,13 @@ class Assets {
   static const String imagesCart = 'assets/images/cart.png';
   static const String imagesCartBlue = 'assets/images/cartBlue.png';
   static const String imagesCirCart = 'assets/images/cirCart.png';
+  static const String imagesConverse = 'assets/images/converse.png';
   static const String imagesCv = 'assets/images/cv.png';
   static const String imagesDiscount = 'assets/images/discount.png';
   static const String imagesFeed = 'assets/images/Feed.png';
   static const String imagesFila = 'assets/images/fila.png';
   static const String imagesFilter = 'assets/images/filter.png';
+  static const String imagesFilter2 = 'assets/images/filter2.png';
   static const String imagesHome = 'assets/images/Home.png';
   static const String imagesHoodies = 'assets/images/hoodies.png';
   static const String imagesJackets = 'assets/images/jackets.png';
@@ -29,6 +31,7 @@ class Assets {
   static const String imagesMakeup = 'assets/images/makeup.png';
   static const String imagesMessages = 'assets/images/Messages.png';
   static const String imagesNike = 'assets/images/Nike.png';
+  static const String imagesOlympus = 'assets/images/olympus.png';
   static const String imagesPpf = 'assets/images/ppf.png';
   static const String imagesPpf1 = 'assets/images/ppf1.png';
   static const String imagesProfile = 'assets/images/profile.png';
@@ -39,6 +42,7 @@ class Assets {
   static const String imagesShirt2 = 'assets/images/shirt2.png';
   static const String imagesShirt3 = 'assets/images/shirt3.png';
   static const String imagesSneakers = 'assets/images/sneakers.png';
+  static const String imagesTimberland = 'assets/images/timberland.png';
   static const String imagesTshirt = 'assets/images/tshirt.png';
   static const String imagesWatches = 'assets/images/watches.png';
   static const String svgAdd = 'assets/svg/Add.svg';

@@ -3,7 +3,10 @@ import 'package:flipit/view/custom/common_image_view_widget.dart';
 import 'package:flipit/view/custom/custom_appbar.dart';
 import 'package:flipit/view/custom/my_text_widget.dart';
 import 'package:flipit/view/custom/my_textfeild.dart';
+import 'package:flipit/view/screen/profile/orders_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 import '../../../config/constants/app_colors.dart';
 import '../../../generated/assets.dart';
@@ -82,58 +85,63 @@ class OrderHistoryScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Row(
-                    spacing: 10,
-                    children: [
-                      CommonImageView(imagePath: Assets.imagesShirt2,height: 70,),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          spacing: 4,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(top: 2, left: 2, right: 7, bottom: 2),
-                              decoration: ShapeDecoration(
-                                color: Colors.black.withValues(alpha: 0.03),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(60),
+                  child: GestureDetector(
+                    onTap: (){
+                      Get.to(()=>OrdersScreen());
+                    },
+                    child: Row(
+                      spacing: 10,
+                      children: [
+                        CommonImageView(imagePath: Assets.imagesShirt2,height: 70,),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            spacing: 4,
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.only(top: 2, left: 2, right: 7, bottom: 2),
+                                decoration: ShapeDecoration(
+                                  color: Colors.black.withValues(alpha: 0.03),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(60),
+                                  ),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    CommonImageView(imagePath: Assets.imagesPpf,height: 18,),
+                                    MyText(
+                                      text: "John Doe",
+                                      size: 10,
+                                      weight: FontWeight.w400,
+                                    )
+                                  ],
                                 ),
                               ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  CommonImageView(imagePath: Assets.imagesPpf,height: 18,),
-                                  MyText(
-                                    text: "John Doe",
-                                    size: 10,
-                                    weight: FontWeight.w400,
-                                  )
-                                ],
+                              MyText(
+                                text: "Hotel T-shirt",
+                                size: 12,
+                                weight: FontWeight.w600,
+                                color: kBlackColor,
                               ),
-                            ),
-                            MyText(
-                              text: "Hotel T-shirt",
-                              size: 12,
-                              weight: FontWeight.w600,
-                              color: kBlackColor,
-                            ),
-                            MyText(
-                              text: "M",
-                              size: 10,
-                              weight: FontWeight.w400,
-                              color: kText2Color,
-                            )
-                          ],
+                              MyText(
+                                text: "M",
+                                size: 10,
+                                weight: FontWeight.w400,
+                                color: kText2Color,
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      MyText(
-                        text: "\$10.00",
-                        size: 15,
-                        weight: FontWeight.w600,
-                        color: kBlueColor,
-                      )
+                        MyText(
+                          text: "\$10.00",
+                          size: 15,
+                          weight: FontWeight.w600,
+                          color: kBlueColor,
+                        )
 
-                    ],
+                      ],
+                    ),
                   ),
                 );
               },)

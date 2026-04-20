@@ -1,7 +1,12 @@
 import 'package:flipit/config/constants/app_sizes.dart';
 import 'package:flipit/view/custom/common_image_view_widget.dart';
 import 'package:flipit/view/custom/my_text_widget.dart';
+import 'package:flipit/view/screen/profile/account_setting_screen.dart';
+import 'package:flipit/view/screen/profile/order_history_screen.dart';
+import 'package:flipit/view/screen/profile/payment_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 import '../../../config/constants/app_colors.dart';
 import '../../../generated/assets.dart';
@@ -182,42 +187,57 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               spacing: 8,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    MyText(
-                      text: "Account Settings",
-                      size: 15,
-                      weight: FontWeight.w600,
-                    ),
-                    CommonImageView(svgPath: Assets.svgForward1,)
-                  ],
+                GestureDetector(
+                  onTap:(){
+                    Get.to(()=>AccountSettingScreen());
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      MyText(
+                        text: "Account Settings",
+                        size: 15,
+                        weight: FontWeight.w600,
+                      ),
+                      CommonImageView(svgPath: Assets.svgForward1,)
+                    ],
+                  ),
                 ),
                 Divider(thickness: 0.5,),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    MyText(
-                      text: "Order History",
-                      size: 15,
-                      weight: FontWeight.w600,
-                    ),
-                    CommonImageView(svgPath: Assets.svgForward1,)
-                  ],
+                GestureDetector(
+                  onTap:(){
+                    Get.to(()=>OrderHistoryScreen());
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      MyText(
+                        text: "Order History",
+                        size: 15,
+                        weight: FontWeight.w600,
+                      ),
+                      CommonImageView(svgPath: Assets.svgForward1,)
+                    ],
+                  ),
                 ),
                 Divider(thickness: 0.5,),
-                Row(
-                  spacing: 10,
-                  children: [
-                    MyText(
-                      text: "Payment Methods",
-                      size: 15,
-                      weight: FontWeight.w600,
-                    ),
-                    Spacer(),
-                    CommonImageView(svgPath: Assets.svgMaster,),
-                    CommonImageView(svgPath: Assets.svgForward1,)
-                  ],
+                GestureDetector(
+                  onTap: (){
+                    Get.to(()=>PaymentScreen());
+                  },
+                  child: Row(
+                    spacing: 10,
+                    children: [
+                      MyText(
+                        text: "Payment Methods",
+                        size: 15,
+                        weight: FontWeight.w600,
+                      ),
+                      Spacer(),
+                      CommonImageView(svgPath: Assets.svgMaster,),
+                      CommonImageView(svgPath: Assets.svgForward1,)
+                    ],
+                  ),
                 ),
                 Divider(thickness: 0.5,),
                 Row(
