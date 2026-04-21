@@ -14,6 +14,8 @@ import 'package:flipit/view/screen/home/categories_screen.dart';
 import 'package:flipit/view/screen/home/home_screen.dart';
 import 'package:flipit/view/screen/liked_product/like_product_screen.dart';
 import 'package:flipit/view/screen/offers/bundle_offer_screen.dart';
+import 'package:flipit/view/screen/offers/make_offer_screen.dart';
+import 'package:flipit/view/screen/product/product_view_screen.dart';
 import 'package:flipit/view/screen/profile/Profile_screen.dart';
 import 'package:flipit/view/screen/profile/account_setting_screen.dart';
 import 'package:flipit/view/screen/profile/order_history_screen.dart';
@@ -63,7 +65,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackGroundColor,
         appBarTheme: AppBarTheme(backgroundColor: kBackGroundColor),
       ),
-      home: SplashScreen(),
+      home: ProductViewScreen(),
       defaultTransition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 500),
     );

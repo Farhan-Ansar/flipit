@@ -116,7 +116,7 @@ class MyBorderButton extends StatelessWidget {
     super.key,
     required this.buttonText,
     required this.onTap,
-    this.height = 48,
+    this.height = 52,
     this.textSize,
     this.weight,
     this.child,
