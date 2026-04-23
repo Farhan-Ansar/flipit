@@ -321,7 +321,7 @@ class _MyTextField2State extends State<MyTextField2> {
                 ),
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: kQuaternaryColor,
+                  fillColor: widget.filledColor ?? kQuaternaryColor,
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(
                       color: kBlueColor,

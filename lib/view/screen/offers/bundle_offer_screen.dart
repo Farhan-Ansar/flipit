@@ -19,7 +19,7 @@ import '../../custom/common_image_view_widget.dart';
 class BundleOfferScreen extends StatelessWidget {
    BundleOfferScreen({super.key});
 
-  final CartController controller = Get.put(CartController());
+  final CartBundleController controller = Get.put(CartBundleController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -171,7 +171,7 @@ class BundleOfferScreen extends StatelessWidget {
 
 
 
-class CartController extends GetxController {
+class CartBundleController extends GetxController {
   RxInt quantity = 1.obs;
 
   void increment() {

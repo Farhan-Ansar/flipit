@@ -15,6 +15,7 @@ class Assets {
   static const String imagesCirCart = 'assets/images/cirCart.png';
   static const String imagesConverse = 'assets/images/converse.png';
   static const String imagesCv = 'assets/images/cv.png';
+  static const String imagesDel = 'assets/images/del.png';
   static const String imagesDiscount = 'assets/images/discount.png';
   static const String imagesFeed = 'assets/images/Feed.png';
   static const String imagesFila = 'assets/images/fila.png';
@@ -66,6 +67,7 @@ class Assets {
   static const String svgGoogle = 'assets/svg/google.svg';
   static const String svgLikeFilled = 'assets/svg/Like_Filled.svg';
   static const String svgLikedProducts = 'assets/svg/LikedProducts.svg';
+  static const String svgLocationFilled = 'assets/svg/Location_Filled.svg';
   static const String svgMaster = 'assets/svg/master.svg';
   static const String svgMst = 'assets/svg/mst.svg';
   static const String svgOrders = 'assets/svg/Orders.svg';
@@ -79,5 +81,6 @@ class Assets {
   static const String svgVisa = 'assets/svg/visa.svg';
   static const String svgWishlist = 'assets/svg/Wishlist.svg';
   static const String svgWishlist1 = 'assets/svg/Wishlist1.svg';
+  static const String svgWishlist2 = 'assets/svg/Wishlist2.svg';
 
 }

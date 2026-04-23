@@ -7,6 +7,7 @@ import 'package:flipit/view/screen/auth/verify_code_screen.dart';
 import 'package:flipit/view/screen/auth/verify_email_screen.dart';
 import 'package:flipit/view/screen/auth/verify_phone_number_screen.dart';
 import 'package:flipit/view/screen/bottom_nav_bar/bottom_nav_bar_screen.dart';
+import 'package:flipit/view/screen/cart/cart_screen.dart';
 import 'package:flipit/view/screen/chat/chat_screen.dart';
 import 'package:flipit/view/screen/chat/message_screen.dart';
 import 'package:flipit/view/screen/feed/feed_without_ad_screen.dart';
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackGroundColor,
         appBarTheme: AppBarTheme(backgroundColor: kBackGroundColor),
       ),
-      home: ProductViewScreen(),
+      home: CartScreen(),
       defaultTransition: Transition.fadeIn,
       transitionDuration: const Duration(milliseconds: 500),
     );

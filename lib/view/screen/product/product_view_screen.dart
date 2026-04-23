@@ -380,6 +380,247 @@ class ProductViewScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: ShapeDecoration(
+                      color: kQuaternaryColor,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: kBorderColor,
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                MyText(
+                                  text: "4.5",
+                                  size: 42,
+                                  weight: FontWeight.w700,
+                                  color: kBlackColor,
+                                ),
+                                const SizedBox(width: 6),
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 6),
+                                  child: MyText(
+                                    text: "/ 5",
+                                    size: 22,
+                                    weight: FontWeight.w600,
+                                    color: Colors.black54,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        const SizedBox(width: 24),
+                        Expanded(
+                          child: Column(
+                            children: [
+                              ratingBarRow("5", 0.95),
+                              const SizedBox(height: 8),
+                              ratingBarRow("4", 0.72),
+                              const SizedBox(height: 8),
+                              ratingBarRow("3", 0.42),
+                              const SizedBox(height: 8),
+                              ratingBarRow("2", 0.22),
+                              const SizedBox(height: 8),
+                              ratingBarRow("1", 0.10),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 12,),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(20),
+                    decoration: ShapeDecoration(
+                      color: const Color(0x1900C4E4),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          spacing: 5,
+                          children: [
+                            CommonImageView(imagePath: Assets.imagesPpf,height: 42,),
+                            Expanded(
+                              child: Column(
+                                spacing: 3,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    spacing: 5,
+                                    children: [
+                                      MyText(
+                                        text: "John Doe",
+                                        size: 15,
+                                        weight: FontWeight.w600,
+                                      ),
+                                      Icon(Icons.star_rate_rounded,color: Color(0xFFF4B400),size: 15,),
+                                      MyText(
+                                        text: "4.8",
+                                        size: 15,
+                                        weight: FontWeight.w600,
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    spacing: 4,
+                                    children: [
+                                      CommonImageView(svgPath: Assets.svgLocationFilled,),
+                                      MyText(
+                                        text: "London, UK",
+                                        size: 10,
+                                        weight: FontWeight.w600,
+                                        color: kText2Color,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            MyText(
+                              text: "Go to Shop",
+                              size: 12,
+                              weight: FontWeight.w600,
+                            ),
+                            SizedBox(width: 2,),
+                            CommonImageView(svgPath: Assets.svgForward,)
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4),
+                          child: Divider(thickness: 0.5,),
+                        ),
+                        Row(
+                          spacing: 10,
+                          children: [
+                            CommonImageView(imagePath: Assets.imagesDel,height: 32,),
+                            MyText(
+                              text: "50 More Products",
+                              size: 15,
+                              weight: FontWeight.w600,
+                            ),
+
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 12,),
+                  MyText(
+                    text: "Leave a Review",
+                    size: 17,
+                    weight: FontWeight.w600,
+                  ),
+                  SizedBox(height: 6,),
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: ShapeDecoration(
+                      color: kQuaternaryColor,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          width: 1,
+                          color: kBorderColor,
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          spacing: 5,
+                          children: [
+                            CommonImageView(imagePath: Assets.imagesPpf,height: 32,),
+                            Expanded(
+                              child: Column(
+                                spacing: 3,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  MyText(
+                                    text: "John Doe",
+                                    size: 15,
+                                    weight: FontWeight.w600,
+                                  ),
+
+                                ],
+                              ),
+                            ),
+                            Row(
+                              children: List.generate(
+                                5,
+                                    (index) => const Padding(
+                                  padding: EdgeInsets.only(left: 0),
+                                  child: Icon(
+                                    Icons.star_border,
+                                    color: Colors.grey,
+                                    size: 24,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        MyTextField2(
+                          filledColor: kBorderColor,
+                          hint: "Leave a review",
+                          maxLines: 5,
+                        ),
+                        SizedBox(height: 10,),
+                       Row(
+                         spacing: 10,
+                         children: [
+                           Expanded(
+                             child: MyBorderButton(
+                               radius: 16,
+                               borderColor: kBorderColor,
+                               bgColor: Color(0xFFFBFBFB),
+                               textColor: kText2Color,
+                               buttonText: "Attach",
+                               onTap: () {},
+                             ),
+                           ),
+                           Expanded(child: MyButton(onTap: (){}, buttonText: "Submit"))
+                         ],
+                       )
+
+                      ],
+                    ),
+                  ),
+
+
+
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 25),
+              width: double.infinity,
+              padding: AppSizes.DEFAULT,
+              decoration: ShapeDecoration(
+                color: kQuaternaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                   MyText(
                     text: "Customer Reviews",
                     size: 17,
@@ -678,6 +919,39 @@ class ProductViewScreen extends StatelessWidget {
       ),
     );
   }
+   Widget ratingBarRow(String rating, double progress) {
+     return Row(
+       children: [
+         SizedBox(
+           width: 12,
+           child: MyText(
+             text: rating,
+             size: 14,
+             weight: FontWeight.w600,
+             color: kBlackColor,
+           ),
+         ),
+         const SizedBox(width: 6),
+         const Icon(
+           Icons.star_rounded,
+           color: Color(0xFFF4B400),
+           size: 18,
+         ),
+         const SizedBox(width: 10),
+         Expanded(
+           child: ClipRRect(
+             borderRadius: BorderRadius.circular(20),
+             child: LinearProgressIndicator(
+               value: progress,
+               minHeight: 10,
+               backgroundColor: const Color(0xFFF1F1F1),
+               valueColor: const AlwaysStoppedAnimation(Color(0xFF11C5E8)),
+             ),
+           ),
+         ),
+       ],
+     );
+   }
 }
 
 
