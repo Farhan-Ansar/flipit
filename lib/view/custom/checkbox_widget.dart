@@ -1,46 +1,48 @@
-
 import 'package:flutter/material.dart';
-
-import '../../config/constants/app_colors.dart';
-
 
 class CheckBoxWidget extends StatelessWidget {
   final bool isChecked;
   final Function(bool?)? onChanged;
-  final LinearGradient kborderGradient;
+  final double size;
 
-  CheckBoxWidget({
+  const CheckBoxWidget({
     super.key,
     this.isChecked = false,
     required this.onChanged,
-    this.kborderGradient = kPrimaryGradeintColor,
+    this.size = 18,
   });
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 20,
-      width: 20,
-      child: Container(
+    return GestureDetector(
+      onTap: () {
+        onChanged?.call(!isChecked);
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        curve: Curves.easeInOut,
+        height: size,
+        width: size,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-        ),
-        child: Checkbox(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          checkColor: kTertiaryColor,
-          activeColor: kTertiaryColor, // Active color will not be used as we're using fillColor
-          fillColor: MaterialStateProperty.resolveWith<Color>(
-            (Set<MaterialState> states) {
-              if (states.contains(MaterialState.selected)) {
-                // When checked, return a transparent color so that we can control it via decoration
-                return kTertiaryColor;
-              }
-              return kTertiaryColor;
-            },
+          color: isChecked
+              ? const Color(0xFF12BBD3)
+              : const Color(0xFFF1F1F1),
+          borderRadius: BorderRadius.circular(6),
+          border: isChecked
+              ? null
+              : Border.all(
+            color: const Color(0xFFECECEC),
+            width: 1,
           ),
-          value: isChecked,
-          onChanged: onChanged,
         ),
+        child: isChecked
+            ? Icon(
+          Icons.check,
+          color: Colors.white,
+          size: size * 0.70,
+          weight: 900,
+        )
+            : null,
       ),
     );
   }

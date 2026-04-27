@@ -21,6 +21,7 @@ class Assets {
   static const String imagesFila = 'assets/images/fila.png';
   static const String imagesFilter = 'assets/images/filter.png';
   static const String imagesFilter2 = 'assets/images/filter2.png';
+  static const String imagesHeart2 = 'assets/images/heart2.png';
   static const String imagesHome = 'assets/images/Home.png';
   static const String imagesHoodies = 'assets/images/hoodies.png';
   static const String imagesHotel = 'assets/images/hotel.png';
